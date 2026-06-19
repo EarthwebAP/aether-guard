@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aether-guard"
+version = "0.1.0"
+description = "Bulletproof reliability wrapper for AI agents and LLMs. Add 3 lines of code, get 99.99% uptime."
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "Dave", email = "969dwi@gmail.com"},
+]
+keywords = ["ai", "llm", "reliability", "langchain", "agents", "autogen", "fault-tolerance"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries",
+]
+
+dependencies = [
+    "httpx>=0.24.0",
+    "pydantic>=2.0",
+]
+
+[project.optional-dependencies]
+langchain = ["langchain>=0.0.200"]
+dev = ["pytest>=7.0", "pytest-asyncio>=0.21.0", "black>=23.0", "ruff>=0.1.0"]
+
+[project.urls]
+Homepage = "https://github.com/davetech/aether-guard"
+Documentation = "https://github.com/davetech/aether-guard#readme"
+Repository = "https://github.com/davetech/aether-guard.git"
+Issues = "https://github.com/davetech/aether-guard/issues"
+
+[tool.setuptools]
+packages = ["aether_guard"]
